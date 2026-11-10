@@ -144,7 +144,7 @@ static void check_terminal_and_utf8(void)
 
 	{
 		char dir[UI_PATH_MAX];
-		char file[UI_PATH_MAX];
+		char file[UI_PATH_MAX + 64];
 
 		/*
 		 * 设置写入配置目录：测试改到临时目录，绝不碰用户的真实设置

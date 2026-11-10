@@ -165,7 +165,8 @@ static void ui_lib_abs_path(const char *path, char *dst, size_t cap)
 		free(full);
 		return;
 	}
-	snprintf(dst, cap, "%s", path);
+	if (dst != path)
+		snprintf(dst, cap, "%s", path);
 }
 
 /*
